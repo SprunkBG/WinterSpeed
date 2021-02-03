@@ -109,9 +109,22 @@ namespace CarSpeed
             }
         }
 
+        public static void PrintDateAndTime()
+        {
+            DateTime date = DateTime.Now;
+            Console.WriteLine(date.ToString());
+        }
+
+        public static void SetConsoleTitle()
+        {
+            Console.Title = "Winter speed";
+        }
+
         static void Main(string[] args)
         {
-            
+
+            SetConsoleTitle();
+            PrintDateAndTime();
             PrintIntoduction();
 
             PrintBackgroundColorInput();
