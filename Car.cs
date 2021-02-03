@@ -12,7 +12,7 @@ namespace CarSpeed
         public string transmission { get; set; }
         public double weight { get; set; }
 
-        //a variable to save the safe speed
+        //A variable to save the safe speed
         public int perfectSpeed;
 
         //Checks all options for 4x4 transmission

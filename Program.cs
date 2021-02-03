@@ -5,14 +5,7 @@ namespace CarSpeed
     class Program
     {
 
-        //sets the console setting
-        public static void ConsoleSettings()
-        {
-
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.Title = "Winter Speed";
-
-        }
+        //Sets the console setting
 
         public static void PrintIntoduction()
         {
@@ -34,10 +27,100 @@ namespace CarSpeed
             Console.WriteLine("How much weights your car?");
         }
 
+        public static void PrintTextColorInput()
+        {
+            Console.WriteLine("Which color you would like to be the text (red, cyan, blue, green, black, white or gray)?");
+        }
+
+        public static void TextColor(string textColor)
+        {
+            if (textColor == "green" || textColor == "Green")
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+            }
+            else if (textColor == "blue" || textColor == "Blue")
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+            }
+            else if (textColor == "red" || textColor == "Red")
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+            }
+            else if (textColor == "cyan" || textColor == "Cyan")
+            {
+                Console.ForegroundColor = ConsoleColor.Cyan;
+            }
+            else if (textColor == "black" || textColor == "Black")
+            {
+                Console.ForegroundColor = ConsoleColor.Black;
+            }
+            else if (textColor == "gray" || textColor == "Gray")
+            {
+                Console.ForegroundColor = ConsoleColor.Gray;
+            }
+            else if (textColor == "white" || textColor == "White")
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            else
+            {
+                Console.WriteLine("Not existing color! The text will be with default color.");
+            }
+        }
+
+        public static void PrintBackgroundColorInput()
+        {
+            Console.WriteLine("Which color you would like to be the background (red, cyan, blue, green, black, white or gray)?");
+        }
+
+        public static void BackgroundColor(string backgroundColor)
+        {
+            if (backgroundColor == "green" || backgroundColor == "Green")
+            {
+                Console.BackgroundColor = ConsoleColor.Green;
+            }
+            else if (backgroundColor == "blue" || backgroundColor == "Blue")
+            {
+                Console.BackgroundColor = ConsoleColor.Blue;
+            }
+            else if (backgroundColor == "red" || backgroundColor == "Red")
+            {
+                Console.BackgroundColor = ConsoleColor.Red;
+            }
+            else if (backgroundColor == "cyan" || backgroundColor == "Cyan")
+            {
+                Console.BackgroundColor = ConsoleColor.Cyan;
+            }
+            else if (backgroundColor == "black" || backgroundColor == "Black")
+            {
+                Console.BackgroundColor = ConsoleColor.Black;
+            }
+            else if (backgroundColor == "gray" || backgroundColor == "Gray")
+            {
+                Console.BackgroundColor = ConsoleColor.Gray;
+            }
+            else if (backgroundColor == "white" || backgroundColor == "White")
+            {
+                Console.BackgroundColor = ConsoleColor.White;
+            }
+            else
+            {
+                Console.WriteLine("Not existing color! The background will be with default color.");
+            }
+        }
+
         static void Main(string[] args)
         {
-            ConsoleSettings();
+            
             PrintIntoduction();
+
+            PrintBackgroundColorInput();
+            string backgroundColor = Console.ReadLine();
+            BackgroundColor(backgroundColor);
+
+            PrintTextColorInput();
+            string textColor = Console.ReadLine();
+            TextColor(textColor);
 
             PrintTireInput();
             string tires = Console.ReadLine();
